@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamezone Home Page</title>
+    <link rel="stylesheet" href="../css/SettingsStyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logocontainer">
+            <img id="lightbulb" src="../images/Genius.png" alt="Light Bulb">
+        </div>
+        <ul class="menu">
+            <li><a href="homepage.html">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+             </a>
+            </li>
+            <li><a href="ReadingMainPage.html">
+                <i class="fas fa-book-open-reader"></i>
+                <span>Reading</span>
+             </a>
+            </li>
+            <li><a href="MemoryMainPage.html">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Memory</span>
+             </a>
+            </li>
+            <li><a href="LudusMagnus.html">
+                <i class="fas fa-dumbbell"></i>
+                 <span>Ludus Magnus</span>
+             </a>
+            </li>
+            <li class="active"><a href="Settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+             </a>
+            </li>
+            <li class="logout"><a href="index.html">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+             </a>
+            </li>
+        </ul>
+    </div>
+    
+
+    <div class="settings-container">
+        <h1>Settings</h1>
+        <div class="profile-picture-section">
+            <h2>Upload Profile Picture</h2>
+            <input type="file" id="profilePictureUpload" accept="image/*">
+            <button class="btn" onclick="uploadProfilePicture()">Upload</button>
+        </div>
+    
+
+    
+        <h2>Change Username</h2>
+        <form id="changeUsernameForm">
+            <label for="newUsername">New Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <button type="submit" class="btn">Change Username</button>
+        </form>
+   
+
+  
+        <h2>Change Password</h2>
+        <form id="changePasswordForm">
+            <label for="currentPassword">Current Password:</label>
+            <input type="password" id="currentPassword" name="currentPassword" required>
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <button type="submit" class="btn">Change Password</button>
+        </form>
+    </div>
+
+    <script src="../js/SettingsScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Guessing Game</title>
+<link rel="stylesheet" href="../css/DategameStyle.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Date Guessing Game</h1>
+    <p style="margin-bottom:5px">Guess the day of the date! For example, 14 March 2024 was a...Thursday!</p>
+    <p style="margin-bottom:5px">This game challenges the student's mathematical skills as well as memory. Formulas can be found online.</p>
+    <p style="margin-bottom:5px">Choose a date range and click "Generate" to begin. Good luck!</p>
+    <form id="generator-form">
+      <div>Points: <span id="Points">0</span><span id="NumberQuestions">/0</span></div>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate">
+      <label style="color:gold;" for="amount">How many dates do you want to guess:</label>
+      <input type="number" id="amount" min="1" value="1">
+      <button type="submit">Generate</button>
+    </form>
+    <div id="output"></div>
+    <div id="guess-form" style="display: none;">
+      <label for="Userguess">Guess the day:</label>
+      <input type="text" id="guessAnswer">
+      <button id="submitGuess" type="button"onclick="handleGuessSubmission()">Submit Guess</button>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <div class="input-box">
+    <button class="backbutton" id="loginButton" type="button"onclick="redirectToMemoryPage()">EXIT PAGE</button>
+  </div>
+
+  <script src="../js/DateGameScript.js"></script>
+</body>
+</html>

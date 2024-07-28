@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamezone Home Page</title>
+    <link rel="stylesheet" href="../css/homepagestyle.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logocontainer">
+            <img id="lightbulb" src="../images/Genius.png" alt="Light Bulb">
+        </div>
+        <ul class="menu">
+            <li class="active"><a href="#">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+             </a>
+            </li>
+            <li><a href="ReadingMainPage.html">
+                <i class="fas fa-book-open-reader"></i>
+                <span>Reading</span>
+             </a>
+            </li>
+            <li><a href="MemoryMainPage.html">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Memory</span>
+             </a>
+            </li>
+            <li><a href="LudusMagnus.html">
+                <i class="fas fa-dumbbell"></i>
+                 <span>Ludus Magnus</span>
+             </a>
+            </li>
+            <li><a href="Settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+             </a>
+            </li>
+            <li class="logout"><a href="index.html">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+             </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>Welcome, <span id="username">David</span>! <button class="skiller-button">SKILLER</button> <button class="skiller-button">SUPPORT</button></h1>
+            <div class="profile-bar">
+                <img src="../images/profile-photo.jpg" alt="Profile Photo" class="profile-photo">
+                <div class="notifications">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="messages">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="badge">5</span>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="recentActivities" class="recent-activities">
+                <h2>Recent Activities</h2>
+                <ul id="recentActivitiesList">
+                    <li>This section will list your recently played games</li>
+                    <li>Including your scores</li>
+                    <li>and time taken</li>
+                </ul>
+            </div>
+            <div class="tasks">
+                <h2>Tasks</h2>
+                <ul>
+                    <li>Complete daily challenge</li>
+                    <li>Join multiplayer game</li>
+                    <li>Update profile settings</li>
+                </ul>
+            </div>
+            <div class="stats">
+                <h2>Game Stats</h2>
+                <div class="stats-content">
+                    <div class="stat-item">
+                        <h3>Word Game</h3>
+                        <p id="wordGameHighScore">High Score: N/A</p>
+                        <p id="wordGameBestTime">Best Time: N/A</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Number Game</h3>
+                        <p id="numberGameHighScore">High Score: N/A</p>
+                        <p id="numberGameBestTime">Best Time: N/A</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Game C</h3>
+                        <p>High Score: 2500</p>
+                        <p>Levels Completed: 15</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/homepagescript.js"></script>
+</body>
+</html>

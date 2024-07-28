@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Game</title>
+    <link rel="stylesheet" href="../css/NumbersGamestyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Number Game</h1>
+        <h2>Practice your number memorization. Hint: use your hooks or memory palace!</h2>
+        <p>The number appears once you start timing</p>
+        <p>Once you stop the timer, the number will disappear and then you can test yourself</p>
+        <form id="numberForm">
+            <label for="numDigits">Number of digits (2-100):</label>
+            <input type="number" id="numDigits" name="numDigits" min="2" max="100" required>
+            <div>
+                <input type="checkbox" id="splitDigits">
+                <label for="splitDigits">Split into 2-digit segments</label>
+            </div>
+            <!-- <button class="btn" button type="button" onclick="generateNumber()">Generate</button> -->
+        </form>
+        <div id="numberContainer"></div>
+        <button class="btn" id="startButton" onclick="startTiming()">Start Timing</button>
+        <button class="btn"button id="stopButton" onclick="stopTiming()" disabled>Stop Timing</button>
+        <div id="resultContainer"></div>
+        <div id="timerContainer">00:00:00</div>
+        <div id="inputContainer"></div>
+        <button class="btn" button id="markButton" onclick="markAnswers()" style="display: none;">Mark</button>
+        <!-- <div id="resultContainer"></div> -->
+    </div>
+
+    <!-- <div class="container">
+        <h2>Recent Activities</h2>
+        <div id="recentActivities"></div>
+    </div>
+     -->
+    <div class="input-box">
+        <button class="backbutton" style="color:#fff" id="loginButton" type="button"onclick="redirectToMemorypage()">EXIT PAGE</button>
+    </div>
+
+    <script src="../js/NumbersGamescript.js"></script>
+</body>
+</html>

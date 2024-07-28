@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Page</title>
+    <link rel="stylesheet" href="../css/LibraryPageStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+</head>
+<body>
+    <div class="library-container">
+        <h1>Library</h1>
+        <div class="preset-stories">
+            <h2>Preset Stories</h2>
+            <select id="storyList">
+                <!-- Stories will be listed here -->
+            </select>
+            <button id="deleteButton" onclick="deleteStory()">Delete Selected Story</button>
+        </div>
+        <div class="reading-section" id="readingSection" style="display: none;">
+            <h2 id="storyTitle"></h2>
+            <div id="textContainer" class="text-container"></div>
+            <div class="pdf-container" id="pdfContainer"></div>
+            <label for="speed">Reading Speed (words per minute): </label>
+            <input type="number" id="speed" value="200" min="50" max="1000">
+            <button id="startButton" onclick="startReading()">Start</button>
+            <button id="stopButton" onclick="stopReading()" disabled>Stop</button>
+        </div>
+        <div class="upload-section">
+            <h2>Upload Your Own Story</h2>
+            <input type="file" id="fileUpload" accept="application/pdf">
+        </div>
+    </div>
+ 
+    <div class="input-box">
+        <button class="backbutton" id="loginButton" type="button"onclick="redirectToReadingPage()">EXIT PAGE</button>
+      </div>
+
+
+    <script src="../js/LibraryScript.js"></script>
+</body>
+</html>

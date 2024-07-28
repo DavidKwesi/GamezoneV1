@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+    <link rel="stylesheet" href="../css/wordGameT1style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Word Game</h1>
+        <h2>Practice your word memorization</h2>
+        <p>The words appear once you start the timer. To try again, mark and then click start timing.</p>
+        <p>Once you stop the timer, the words will disappear and then you can test yourself</p>
+        <form id="wordForm">
+            <label for="numWords">Number of words (1-100):</label>
+            <input type="number" id="numWords" name="numWords" min="1" max="100" required>
+            <input type="checkbox" id="allowAnyOrder">
+            <label for="allowAnyOrder">Check this to be able to input the words in any order.</label>
+            <!-- <button type="button" class="btn" style="color:#fff" onclick="generateWords()">Generate</button> -->
+        </form>
+        <ol id="wordsContainer"></ol>
+        <button class=btn id="startButton" style="color:#fff" onclick="startTiming()">Start Timing</button>
+        <button class=btn  id="stopButton" style="color:#fff"  onclick="stopTiming()" disabled>Stop Timing</button>
+        <div id="resultContainer"></div>
+        <div id="timerContainer">00:00:00</div>
+        <div id="inputContainer"></div>
+        <button id="markButton" onclick="markAnswers()" style="display: none;">Mark</button>
+    </div>
+    <div class="input-box">
+        <button class="backbutton" style="color:#fff" id="loginButton" type="button"onclick="redirectToMemorypage()">EXIT PAGE</button>
+    </div>
+
+    <script src="../js/wordGameT1script.js"></script>
+</body>
+</html>
