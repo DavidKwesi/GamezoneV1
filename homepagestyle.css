@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: white;
+    color: white;
+    display: flex;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    width: calc(100% - 120px);
+    max-width: 1480px;
+    border: 2px solid gold;
+    box-shadow: 0 0 25px gold;
+    padding: 20px;
+    background: #1a4b5a;
+    margin-left: 0px; /* Add margin to accommodate the sidebar */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.header .profile-bar {
+    display: flex;
+    align-items: center;
+}
+
+.header .profile-bar .profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.header .profile-bar .notifications,
+.header .profile-bar .messages {
+    position: relative;
+    margin-right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header .profile-bar .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.recent-activities,
+.tasks,
+.stats {
+    background: #143447;
+    border: 2px solid gold;
+    box-shadow: 0 0 15px gold;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.tasks:hover{
+    animation: changeBoxShadowColor 3s infinite;
+}
+
+.stats:hover{
+    animation: changeBoxShadowColor 3s infinite;
+}
+
+.recent-activities:hover{
+    animation: changeBoxShadowColor 3s infinite;
+}
+.recent-activities h2,
+.tasks h2,
+.stats h2 {
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.recent-activities ul,
+.tasks ul {
+    list-style: none;
+}
+
+.recent-activities ul li,
+.tasks ul li {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.stats-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-item {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.stat-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+
+
+.sidebar{
+    position:sticky;
+    top:0;
+    left:0;
+    bottom:0;
+    width:120px;
+    height:100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background:#143447;
+}
+
+.sidebar:hover{
+  width: 240px;
+  transition:0.5s;
+}
+
+.logo{
+    height:80px;
+    padding:16px;
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin:8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active{
+    background: gold;
+}
+
+.menu a{
+    color:#fff;
+    font-size:14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+   overflow:hidden; 
+}
+
+.menu a i{
+   font-size: 1.2rem; 
+}
+
+.logout{
+    position: aboslute;
+    bottom:0;
+    left: 0;
+    width:100%;
+}
+#lightbulb {
+    width: 100px;
+    transition: filter 0.3s ease;
+}
+
+#lightbulb:hover {
+    filter: brightness(1.5);
+}
+
+@keyframes changeBoxShadowColor {
+    0% {
+        box-shadow: 20px 20px 20px gold;
+    }
+    25% {
+        box-shadow: 5px 5px 20px turquoise;
+    }
+    50% {
+        box-shadow: 5px 5px 20px green;
+    }
+    75% {
+        box-shadow: 5px 5px 20px white;
+    }
+    100% {
+        box-shadow: 5px 5px 10px red;
+    }
+}
+
+.skiller-button {
+    background-color: #143447; /* Green background */
+    border:2px solid gold;
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline-block element */
+    font-size: 14px; /* Text size */
+    margin-left: 10px; /* Space between the username and the button */
+    border-radius: 5px; /* Rounded corners */
+
+
+}
+
+.skiller-button:hover {
+    background-color: gold;
+    color:black;
+
+}

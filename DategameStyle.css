@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+    box-sizing: border-box;
+    font-family: "poppins";
+    color:gold
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background:#143447;
+
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color:#143447;
+
+  }
+  
+  input[type="date"],
+  input[type="number"],
+  input[type="text"] {
+    width: 150px;
+    border: 2px solid gold;
+    background-color:white;
+    color:#143447;
+
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    color:gold;
+  }
+  
+  #output {
+    margin-top: 20px;
+  }
+
+  
+  .backbutton{
+    position: relative;
+    width:10%;
+    height:45px;
+    margin-left:370px;
+    margin-bottom:40px;
+    margin-top:20px;
+    background: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid gold;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.backbtn::before{
+    content:"";
+    position:absolute;
+    height:300%;
+    width:100%;
+    background: linear-gradient(#143447, gold,#143447, gold);
+    top:-100%;
+    left:0;
+    z-index:-1;
+    transition: .5s;
+}
+
+.backbtn:hover:before{
+top:0;
+}

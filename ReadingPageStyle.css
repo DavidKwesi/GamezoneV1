@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+    box-sizing: border-box;
+    font-family: "poppins";
+    color:gold;
+}
+
+body{
+    display: flex;
+    background:#1a4b5a;
+}
+
+
+.sidebar{
+    position:sticky;
+    top:0;
+    left:0;
+    bottom:0;
+    width:120px;
+    height:100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background:#143447;
+}
+
+.sidebar:hover{
+  width: 240px;
+  transition:0.5s;
+}
+
+.logo{
+    height:80px;
+    padding:16px;
+}
+
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin:8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .active{
+    background: #fff;
+}
+
+.menu a{
+    color:#fff;
+    font-size:14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+   overflow:hidden; 
+}
+
+.menu a i{
+   font-size: 1.2rem; 
+}
+
+.logout{
+    position: aboslute;
+    bottom:0;
+    left: 0;
+    width:100%;
+}
+
+
+
+
+
+.btn{
+    position: sticky;
+    width:80%;
+    height:45px;
+    margin-left:350px;
+    margin-bottom:40px;
+    margin-top:30px;
+    background: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid gold;
+    overflow: hidden;
+    z-index: 1;
+    justify-content:center;
+    align-items: center;
+}
+
+.btn::before{
+    content:"";
+    position:absolute;
+    height:300%;
+    width:100%;
+    background: linear-gradient(#143447, gold,#143447, gold);
+    top:-100%;
+    left:0;
+    z-index:-1;
+    transition: .5s;
+}
+
+.btn:hover:before{
+    top:0;
+}
+button:hover {
+    background-color: #0056b3;
+    color:gold;
+  }
+  
+
+.backbutton{
+    position: relative;
+    width:80%;
+    height:45px;
+    margin-left:350px;
+    margin-bottom:40px;
+    margin-top:20px;
+    background: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid gold;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.backbtn::before{
+    content:"";
+    position:absolute;
+    height:300%;
+    width:100%;
+    background: linear-gradient(#143447, gold,#143447, gold);
+    top:-100%;
+    left:0;
+    z-index:-1;
+    transition: .5s;
+}
+
+.backbtn:hover:before{
+    top:0;
+}
+
+
+#lightbulb {
+    width: 100px;
+    transition: filter 0.3s ease;
+}
+
+#lightbulb:hover {
+    filter: brightness(1.5);
+}
